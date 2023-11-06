@@ -1,0 +1,32 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Sanity Suite" verbose="2">
+	<listeners>
+		<listener class-name="utility.Listeners"></listener>
+	</listeners>
+	<test thread-count="5" name="Test">
+		<classes>
+		 	<class name="contentCreation.UploadAllContentsTypes" />
+			<class name="contentCreation.CreateCourseAssessmentAndSendForReview" />
+			<class name="contentCreation.CreateCourseAndPublish" />
+			<class name="contentCreation.CreateCourseAndVerify" />
+			<class name="contentCreation.CreateBookAndVerify" />
+			<class name="contentCreation.CreateCollectionsAndPublish" />
+			<class name="contentCreation.CreateLessonPlanAndPublish" />
+			<class name="contentCreation.CreateQuestionSetAndVerify" />
+			<class name="contentCreation.CreateResourcesAndPublish" />
+			<class name="contentCreation.FacetFilter" />
+			<class name="contentCreation.ValidateAllMyContentBucket" />
+			<class name="Consumption.ConsumptionScenarios" />
+			<class name="Groups.CreateTheGroups" />
+			<class name="observation.VerifyRoles" />
+			<class name="userOnBoarding.CustodianUser" />
+			<class name="userOnBoarding.Guest_User" />
+			<class name="Groups.VerifyGroupAdminIsAbleToEditAndDelete" />
+			<class name="contentCreation.VerifyUserIsAbleToAddQuestionsAndSave" />
+			<class name="contentCreation.ValidateGuestUserGettingLoginPopUp" />  
+			
+		</classes>
+	</test>
+</suite> 
+ 

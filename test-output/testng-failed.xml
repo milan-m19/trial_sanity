@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Sanity Suite]]" guice-stage="DEVELOPMENT" verbose="2">
+  <listeners>
+    <listener class-name="utility.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)(failed)" verbose="2">
+    <classes>
+      <class name="contentCreation.FacetFilter">
+        <methods>
+          <include name="VerifyFiltersResetToProfileBMCValueswhenNavigatedToOtherTab"/>
+          <include name="BS"/>
+          <include name="Open"/>
+          <include name="Close"/>
+        </methods>
+      </class> <!-- contentCreation.FacetFilter -->
+      <class name="contentCreation.CreateBookAndVerify">
+        <methods>
+          <include name="BS"/>
+          <include name="VerifyCreatorAddCollaboratorInTextbook"/>
+          <include name="Open"/>
+          <include name="VerifyCreatorAddAllTypesOfContent"/>
+          <include name="Close"/>
+        </methods>
+      </class> <!-- contentCreation.CreateBookAndVerify -->
+      <class name="userOnBoarding.Guest_User">
+        <methods>
+          <include name="BS"/>
+          <include name="verifyBMCS_Values_In_Diffrent_Tabs"/>
+          <include name="Open"/>
+          <include name="Close"/>
+        </methods>
+      </class> <!-- userOnBoarding.Guest_User -->
+      <class name="contentCreation.CreateQuestionSetAndVerify">
+        <methods>
+          <include name="BS"/>
+          <include name="VerifyCreatorCreateTwoTypesOfQuestionSetAndSendForReview"/>
+          <include name="Open"/>
+          <include name="Close"/>
+        </methods>
+      </class> <!-- contentCreation.CreateQuestionSetAndVerify -->
+      <class name="contentCreation.CreateCourseAndPublish">
+        <methods>
+          <include name="verifyDiscussionForumForCourse"/>
+          <include name="BS"/>
+          <include name="Open"/>
+          <include name="Close"/>
+        </methods>
+      </class> <!-- contentCreation.CreateCourseAndPublish -->
+    </classes>
+  </test> <!-- Test(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Sanity Suite]] -->
