@@ -18,7 +18,8 @@ public class ExtendReportGenerator {
     public static ExtentReports extent;
     public static ExtentReports getReport(){
 
-        String path=System.getProperty("user.dir")+"/Reports/";
+        // String path=System.getProperty("user.dir")+"/Reports/";
+     String path="C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\DIKSHA-Automated_Suite\\Reports\\";
 
         Date currentDate = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
