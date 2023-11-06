@@ -14,8 +14,8 @@ import org.openqa.selenium.WindowType;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import com.github.javafaker.service.FakeValuesService;
-import com.github.javafaker.service.RandomService;
+// import com.github.javafaker.service.FakeValuesService;
+// import com.github.javafaker.service.RandomService;
 import pageObject.BMCPopup;
 import pageObject.ExplorePage;
 import pageObject.HomePage;
@@ -894,73 +894,73 @@ public class UserOnBoarding extends BaseClass {
 
 	}
 
-	public static String fakerEmail() throws Exception {
-		ExcelDataProvider data = new ExcelDataProvider();
-		String randomFakeEmail = "diksa##@yopmail.com";
-		FakeValuesService fakeValuesService = new FakeValuesService(new Locale("en-GB"), new RandomService());
-		String email = fakeValuesService.bothify(randomFakeEmail);
-//		data.updateData("TestData", email, "", "");
-//		String readData = data.getExcelData(email, 1, 3);
-//		System.out.println(readData);
-		return email;
-	}
+// 	public static String fakerEmail() throws Exception {
+// 		ExcelDataProvider data = new ExcelDataProvider();
+// 		String randomFakeEmail = "diksa##@yopmail.com";
+// 		FakeValuesService fakeValuesService = new FakeValuesService(new Locale("en-GB"), new RandomService());
+// 		String email = fakeValuesService.bothify(randomFakeEmail);
+// //		data.updateData("TestData", email, "", "");
+// //		String readData = data.getExcelData(email, 1, 3);
+// //		System.out.println(readData);
+// 		return email;
+// 	}
 
-	public static void ragisterWithDikshaUsingAnyEmails() throws Exception {
+// 	public static void ragisterWithDikshaUsingAnyEmails() throws Exception {
 
-//		CreateBatchForCourse createBatch = PageFactory.initElements(driver, CreateBatchForCourse.class);
-		// UserOnBoarding enterFullName = new UserOnBoarding();
-//		ExplorePage explore = PageFactory.initElements(driver, ExplorePage.class);
-//		Logout log = PageFactory.initElements(driver, Logout.class);
+// //		CreateBatchForCourse createBatch = PageFactory.initElements(driver, CreateBatchForCourse.class);
+// 		// UserOnBoarding enterFullName = new UserOnBoarding();
+// //		ExplorePage explore = PageFactory.initElements(driver, ExplorePage.class);
+// //		Logout log = PageFactory.initElements(driver, Logout.class);
 
-		LoginAsCustodian Log = PageFactory.initElements(driver, LoginAsCustodian.class);
-		ExcelDataProvider emailPass = new ExcelDataProvider();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		String year = "//div[contains(@role,'listbox')]//following::span";
+// 		LoginAsCustodian Log = PageFactory.initElements(driver, LoginAsCustodian.class);
+// 		ExcelDataProvider emailPass = new ExcelDataProvider();
+// 		JavascriptExecutor js = (JavascriptExecutor) driver;
+// 		String year = "//div[contains(@role,'listbox')]//following::span";
 
-//		DikshaUtils.waitToBeClickableAndClick(Log.getRegisterHereButton());
-//		Thread.sleep(3000);
-		String emailId = UserOnBoarding.fakerEmail();
-		DikshaUtils.waitToBeClickableAndClick(Log.getEnterFullNameInRegisterPage());
-		Thread.sleep(3000);
-		DikshaUtils.waitToBeClickableAndSendKeys(Log.getEnterFullNameInRegisterPage(), emailId);
-		DikshaUtils.waitToBeClickableAndClick(Log.getSelectYearDropdown());
-		DikshaUtils.selectValueFromDropdown(driver, year, "1990");
-		DikshaUtils.waitToBeClickableAndClick(Log.getContinueButton());
-		DikshaUtils.waitToBeClickableAndClick(Log.getSubmitButton());
-		DikshaUtils.waitToBeClickableAndClick(Log.getEmailRadioButton());
-		DikshaUtils.waitToBeClickableAndSendKeys(Log.getEnterEmail(), emailId);
-		String data = emailPass.getExcelData("TestData", 362, 1);
-		System.out.println(data);
-		DikshaUtils.waitToBeClickableAndSendKeys(Log.getSignUpPassWord(), data);
-		DikshaUtils.waitToBeClickableAndSendKeys(Log.getSignUpReEnterPassWord(), data);
-		js.executeScript("arguments[0].scrollIntoView(true);", Log.getContinueButton());
-		DikshaUtils.waitToBeClickableAndClick(Log.getContinueButton());
-		DikshaUtils.waitToBeClickableAndClick(Log.getContinueButton());
-		Thread.sleep(3000);
-		String url = config.get_yopmail_test_data();
-		driver.switchTo().newWindow(WindowType.WINDOW);
-		DikshaUtils.waitWebDriver(3000);
-		driver.get(url);
-		DikshaUtils.waitWebDriver(3000);
-		DikshaUtils.waitToBeClickableAndSendKeys(Log.getEnterEmailToYopmail(), emailId);
-		DikshaUtils.waitWebDriver(3000);
-		DikshaUtils.waitToBeClickableAndClick(Log.getClickSearchInYopMail());
-		DikshaUtils.waitWebDriver(3000);
-		DikshaUtils.waitToBeClickableAndClick(Log.getRefreshButtonInYopmail());
-		DikshaUtils.waitWebDriver(3000);
-		ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
-//		driver.switchTo().window(tabs.get(0));
-//		DikshaUtils.waitWebDriver(3000);
-//		driver.switchTo().window(tabs.get(1));
-//		DikshaUtils.waitWebDriver(3000);
-		DikshaUtils.waitToBeClickableAndClick(Log.getRefreshButtonInYopmail());
-		DikshaUtils.waitWebDriver(3000);
-		driver.switchTo().frame(Log.getOtpFrame());
-		DikshaUtils.waitWebDriver(3000);
-		String otpSent = Log.getEmailOtpSentence().getText();
-		System.out.println(otpSent);
+// //		DikshaUtils.waitToBeClickableAndClick(Log.getRegisterHereButton());
+// //		Thread.sleep(3000);
+// 		String emailId = UserOnBoarding.fakerEmail();
+// 		DikshaUtils.waitToBeClickableAndClick(Log.getEnterFullNameInRegisterPage());
+// 		Thread.sleep(3000);
+// 		DikshaUtils.waitToBeClickableAndSendKeys(Log.getEnterFullNameInRegisterPage(), emailId);
+// 		DikshaUtils.waitToBeClickableAndClick(Log.getSelectYearDropdown());
+// 		DikshaUtils.selectValueFromDropdown(driver, year, "1990");
+// 		DikshaUtils.waitToBeClickableAndClick(Log.getContinueButton());
+// 		DikshaUtils.waitToBeClickableAndClick(Log.getSubmitButton());
+// 		DikshaUtils.waitToBeClickableAndClick(Log.getEmailRadioButton());
+// 		DikshaUtils.waitToBeClickableAndSendKeys(Log.getEnterEmail(), emailId);
+// 		String data = emailPass.getExcelData("TestData", 362, 1);
+// 		System.out.println(data);
+// 		DikshaUtils.waitToBeClickableAndSendKeys(Log.getSignUpPassWord(), data);
+// 		DikshaUtils.waitToBeClickableAndSendKeys(Log.getSignUpReEnterPassWord(), data);
+// 		js.executeScript("arguments[0].scrollIntoView(true);", Log.getContinueButton());
+// 		DikshaUtils.waitToBeClickableAndClick(Log.getContinueButton());
+// 		DikshaUtils.waitToBeClickableAndClick(Log.getContinueButton());
+// 		Thread.sleep(3000);
+// 		String url = config.get_yopmail_test_data();
+// 		driver.switchTo().newWindow(WindowType.WINDOW);
+// 		DikshaUtils.waitWebDriver(3000);
+// 		driver.get(url);
+// 		DikshaUtils.waitWebDriver(3000);
+// 		DikshaUtils.waitToBeClickableAndSendKeys(Log.getEnterEmailToYopmail(), emailId);
+// 		DikshaUtils.waitWebDriver(3000);
+// 		DikshaUtils.waitToBeClickableAndClick(Log.getClickSearchInYopMail());
+// 		DikshaUtils.waitWebDriver(3000);
+// 		DikshaUtils.waitToBeClickableAndClick(Log.getRefreshButtonInYopmail());
+// 		DikshaUtils.waitWebDriver(3000);
+// 		ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+// //		driver.switchTo().window(tabs.get(0));
+// //		DikshaUtils.waitWebDriver(3000);
+// //		driver.switchTo().window(tabs.get(1));
+// //		DikshaUtils.waitWebDriver(3000);
+// 		DikshaUtils.waitToBeClickableAndClick(Log.getRefreshButtonInYopmail());
+// 		DikshaUtils.waitWebDriver(3000);
+// 		driver.switchTo().frame(Log.getOtpFrame());
+// 		DikshaUtils.waitWebDriver(3000);
+// 		String otpSent = Log.getEmailOtpSentence().getText();
+// 		System.out.println(otpSent);
 
-	}
+// 	}
 
 	public static void usePasswordForReportRequest(String user) throws Exception {
 		LoginPage loginpage = PageFactory.initElements(driver, LoginPage.class);
