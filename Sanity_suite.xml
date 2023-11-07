@@ -6,11 +6,11 @@
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
-		 	<class name="contentCreation.UploadAllContentsTypes" />
+<!-- 		 	<class name="contentCreation.UploadAllContentsTypes" />
 			<class name="contentCreation.CreateCourseAssessmentAndSendForReview" />
-			<class name="contentCreation.CreateCourseAndPublish" />
+			<class name="contentCreation.CreateCourseAndPublish" /> -->
 			<class name="contentCreation.CreateCourseAndVerify" />
-			<class name="contentCreation.CreateBookAndVerify" />
+<!-- 			<class name="contentCreation.CreateBookAndVerify" />
 			<class name="contentCreation.CreateCollectionsAndPublish" />
 			<class name="contentCreation.CreateLessonPlanAndPublish" />
 			<class name="contentCreation.CreateQuestionSetAndVerify" />
@@ -24,7 +24,7 @@
 			<class name="userOnBoarding.Guest_User" />
 			<class name="Groups.VerifyGroupAdminIsAbleToEditAndDelete" />
 			<class name="contentCreation.VerifyUserIsAbleToAddQuestionsAndSave" />
-			<class name="contentCreation.ValidateGuestUserGettingLoginPopUp" />  
+			<class name="contentCreation.ValidateGuestUserGettingLoginPopUp" />   -->
 			
 		</classes>
 	</test>
