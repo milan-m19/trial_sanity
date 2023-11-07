@@ -42,8 +42,7 @@ public class BaseClass {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		ExplorePage explore = PageFactory.initElements(driver, ExplorePage.class);
-		Thread.sleep(3000);
-		DikshaUtils.waitToBeClickableAndClick(explore.getExplorebutton());
+		explore.getExplorebutton().click();
 
 	}
 
